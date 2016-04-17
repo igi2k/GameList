@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Automatic">
+    <entity name="Game" representedClassName=".GameMO" syncable="YES">
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="platform" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Platform" inverseName="games" inverseEntity="Platform" syncable="YES"/>
+    </entity>
+    <entity name="Platform" representedClassName=".PlatformMO" syncable="YES">
+        <attribute name="color" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" minValueString="1" syncable="YES"/>
+        <relationship name="games" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Game" inverseName="platform" inverseEntity="Game" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Game" positionX="-63" positionY="-576" width="128" height="73"/>
+        <element name="Platform" positionX="223" positionY="-567" width="128" height="88"/>
+    </elements>
+</model>
